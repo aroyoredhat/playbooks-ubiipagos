@@ -3,15 +3,10 @@
   hosts: web
 
   tasks:
-    - name: Update APT package manager repositories cache
-      become: true
+    - name: Update repos
       yum:
-        update_cache: yes
+        name: "*"
+        state: latest
     - name: Install Java using Ansible
-      become: yes
       yum:
-        name: "{{ packages }}"
-        state: present
-      vars:
-        packages:
-           - openjdk-11-jdk
+        name: java-1.8.0-openjdk

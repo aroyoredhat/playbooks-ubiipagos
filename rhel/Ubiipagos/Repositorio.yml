@@ -3,10 +3,6 @@
   hosts: server1
 
   tasks:
-  - name: Crear directorio
-    command: mkdir /home/Repo
-
-
   - name: Clonar repositorio
     git:
        repo: https://github.com/aroyoredhat/playbooks-ubiipagos.git

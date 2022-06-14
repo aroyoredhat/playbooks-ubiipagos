@@ -7,5 +7,3 @@
     git:
        repo: https://github.com/aroyoredhat/playbooks-ubiipagos.git
        dest: /home/Repo
-       clone: yes
-       update: yes

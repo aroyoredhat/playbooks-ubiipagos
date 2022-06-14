@@ -4,6 +4,6 @@
 
   tasks:
   - name: Clonar repositorio
-    git:
+    ansible.builtin.git:
        repo: https://github.com/aroyoredhat/playbooks-ubiipagos.git
        dest: /home/Repo

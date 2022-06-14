@@ -1,12 +1,10 @@
 ---
-- name: Apache server installed
-  hosts: all
+- name: playbook completo
+  hosts: server1
 
   tasks:
-  - name: latest Apache version installed
-    yum:
-      name: httpd
-      state: latest
+  - name: Realizar conexion jar
+    command: 
 
   - name: latest firewalld version installed
     yum:

@@ -1,0 +1,7 @@
+---
+- name: Descargar repositorio
+  hosts: server1
+
+  tasks:
+  - name: Realizar conexion jar
+    command: 

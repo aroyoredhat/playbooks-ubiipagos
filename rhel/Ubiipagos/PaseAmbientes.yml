@@ -2,8 +2,8 @@
 - name: playbook completo
   hosts: node1
   tasks:
-    - name: Transfer file from ServerA to ServerB
-      synchronize:
-        src: /tmp/archivoPrueba.jar 
-        dest: /tmp/
-      delegate_to: ansible-1
+  - name: Case insensitive password string match
+    ansible.builtin.expect:
+      command: scp -p student1@ansible-1:/tmp/archivoPrueba.jar /tmp/
+      responses:
+        password: "iFfg3mf1mF03Pf"

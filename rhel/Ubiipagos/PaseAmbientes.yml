@@ -3,29 +3,11 @@
   hosts: server1
 
   tasks:
+  - name: Ir a la carpeta
+    chdir: home/Repo 
+    
   - name: Realizar conexion jar
-    command: 
-
-  - name: latest firewalld version installed
-    yum:
-      name: firewalld
-      state: latest
-
-  - name: firewalld enabled and running
-    service:
-      name: firewalld
-      enabled: true
-      state: started
-
-  - name: firewalld permits http service
-    firewalld:
-      service: http
-      permanent: true
-      state: enabled
-      immediate: yes
-
-  - name: Apache enabled and running
-    service:
-      name: httpd
-      enabled: true
-      state: started
+    copy:
+      src=/home/Repo
+      dest=home/
+    delegate_to: server2

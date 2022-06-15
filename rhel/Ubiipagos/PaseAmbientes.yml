@@ -5,5 +5,5 @@
     - name: Transfer file from ServerA to ServerB
       copy:
         src: /tmp/archivoPrueba.jar
-        dest: /tmp/archivoPrueba.jar
+        dest: /home/ec2-user/deployment
       delegate_to: ansible-1

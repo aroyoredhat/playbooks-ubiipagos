@@ -3,11 +3,8 @@
   hosts: node1
 
   tasks:
-  - name: Ir a la carpeta
-    command: chdir=/home/Repo ls 
-    
-  - name: Realizar conexion jar
-    copy:
-      src=/home/Repo
-      dest=/home/
-    delegate_to: ansible-1
+  - name: Case insensitive password string match
+    ansible.builtin.expect:
+      command: scp -p student1@ansible-1:/tmp/archivoPrueba.jarXX.jar /tmp/
+      responses:
+        (?i)password: "iFfg3mf1mF03Pf"

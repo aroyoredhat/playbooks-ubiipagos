@@ -5,6 +5,6 @@
   tasks:
   - name: Case insensitive password string match
     ansible.builtin.expect:
-      command: scp -p student1@ansible-1:/tmp/archivoPrueba.jarXX.jar /tmp/
+      command: scp -p student1@ansible-1:/tmp/archivoPrueba.jar /tmp/
       responses:
         password: "iFfg3mf1mF03Pf"

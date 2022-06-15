@@ -1,9 +1,9 @@
 ---
 - name: playbook completo
   hosts: node1
-
   tasks:
-  - name: Ir a la carpeta
-    ansible.posix.synchronize:
-      src: /tmp/archivoPrueba.jar 
-      dest: /tmp/
+    - name: Transfer file from ServerA to ServerB
+      synchronize:
+        src: /tmp/archivoPrueba.jar
+        dest: /tmp/
+      delegate_to: ansible-1

@@ -1,6 +1,6 @@
 ---
 - name: playbook completo
-  hosts: server1
+  hosts: node1
 
   tasks:
   - name: Ir a la carpeta
@@ -10,4 +10,4 @@
     copy:
       src=/home/Repo
       dest=/home/
-    delegate_to: server2
+    delegate_to: node2

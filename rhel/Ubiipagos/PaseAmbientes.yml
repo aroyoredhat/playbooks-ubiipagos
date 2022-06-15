@@ -4,6 +4,6 @@
   tasks:
     - name: Transfer file from ServerA to ServerB
       copy:
-        src: /tmp/archivoPrueba.jar
+        src: /home/student1/deployment/archivoPrueba.jar
         dest: /home/ec2-user/deployment
       delegate_to: ansible-1

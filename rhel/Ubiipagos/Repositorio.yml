@@ -1,6 +1,6 @@
 ---
 - name: Descargar repositorio
-  hosts: control
+  hosts: server1
 
   tasks:
   - name: Install git

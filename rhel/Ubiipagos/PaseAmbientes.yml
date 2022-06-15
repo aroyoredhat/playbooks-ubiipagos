@@ -10,4 +10,4 @@
     copy:
       src=/home/Repo
       dest=/home/
-    delegate_to: node2
+    delegate_to: ansible-1

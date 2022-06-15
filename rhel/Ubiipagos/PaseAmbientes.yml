@@ -3,7 +3,7 @@
   hosts: node1
   tasks:
     - name: Transfer file from ServerA to ServerB
-      synchronize:
+      copy:
         src: /tmp/archivoPrueba.jar
         dest: /tmp/
       delegate_to: ansible-1

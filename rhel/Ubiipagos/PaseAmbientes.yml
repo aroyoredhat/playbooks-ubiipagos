@@ -4,10 +4,10 @@
 
   tasks:
   - name: Ir a la carpeta
-    chdir: home/Repo 
+    chdir: /home/Repo 
     
   - name: Realizar conexion jar
     copy:
       src=/home/Repo
-      dest=home/
+      dest=/home/
     delegate_to: server2

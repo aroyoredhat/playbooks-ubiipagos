@@ -6,4 +6,5 @@
       copy:
         src: /home/student1/deployment/archivoPrueba.jar
         dest: /home/ec2-user/deployment
+        remote_src: yes
       delegate_to: ansible-1

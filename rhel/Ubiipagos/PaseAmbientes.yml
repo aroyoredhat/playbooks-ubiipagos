@@ -1,10 +1,10 @@
 ---
 - name: playbook completo
-  hosts: node1
+  hosts: ansible-1
   tasks:
     - name: Transfer file from ServerA to ServerB
       copy:
         src: /home/student1/deployment/archivoPrueba.jar
         dest: /tmp/archivoPrueba.jar
         remote_src: yes
-      delegate_to: ansible-1
+      delegate_to: node1

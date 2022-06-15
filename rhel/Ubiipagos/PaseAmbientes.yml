@@ -1,5 +1,6 @@
 ---
 - name: playbook completo
+  hosts: all
   tasks:
     - name: Transfer file from ServerA to ServerB
       copy:

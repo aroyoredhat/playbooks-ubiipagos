@@ -1,9 +1,13 @@
 ---
 - name: playbook completo
   hosts: node1
+
   tasks:
-  - name: Case insensitive password string match
-    ansible.builtin.expect:
-      command: scp -p student1@ansible-1:/tmp/archivoPrueba.jar /tmp/
-      responses:
-        password: "iFfg3mf1mF03Pf"
+  - name: Ir a la carpeta
+    command: chdir=/home/Repo ls 
+    
+  - name: Realizar conexion jar
+    copy:
+      src=/home/Repo
+      dest=/home/
+    delegate_to: node2

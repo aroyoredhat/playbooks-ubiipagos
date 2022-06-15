@@ -1,13 +1,9 @@
 ---
 - name: playbook completo
-  hosts: node1
+  hosts: server1
 
   tasks:
   - name: Ir a la carpeta
-    command: chdir=/home/Repo ls 
-    
-  - name: Realizar conexion jar
-    copy:
-      src=/home/Repo
-      dest=/home/
-    delegate_to: node2
+    ansible.posix.synchronize:
+      src: /tmp/archivoPrueba.jar 
+      dest: /tmp/

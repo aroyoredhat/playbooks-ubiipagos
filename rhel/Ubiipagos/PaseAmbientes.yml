@@ -1,9 +1,10 @@
 ---
 - name: playbook completo
-  hosts: node1
+  hosts: all
   tasks:
     - name: Transfer file from ServerA to ServerB
       copy:
         src: /home/ec2-user/deployment/archivoPrueba.jar
         dest: /tmp/
         remote_src: yes
+      delegate_to: node1

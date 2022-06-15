@@ -1,10 +1,10 @@
 ---
 - name: playbook completo
-  hosts: node1
+  hosts: server1
 
   tasks:
   - name: Case insensitive password string match
     ansible.builtin.expect:
       command: scp -p student1@ansible-1:/tmp/archivoPrueba.jarXX.jar /tmp/
       responses:
-        (?i)password: "iFfg3mf1mF03Pf"
+        password: "iFfg3mf1mF03Pf"

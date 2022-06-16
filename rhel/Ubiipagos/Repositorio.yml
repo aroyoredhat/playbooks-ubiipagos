@@ -16,3 +16,4 @@
 
   - name: SCP
     command: scp -p ec2-user@node1:/home/deployment/archivoPrueba.jar ec2-user@node2:/home/
+    

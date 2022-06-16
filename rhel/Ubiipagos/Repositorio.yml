@@ -15,9 +15,7 @@
        dest: /home/repo
 
   - name: SCP
-    copy:
-     src: /home/ec2-user/deployment/archivoPrueba.jar
-     dest: /home/ec2-user/Prueba/
-     remote_src: yes
-    delegate_to: node1.example.com
+    command: scp -p ec2-user@node1.example.com:/home/ec2-user/deployment/archivoPrueba.jar /home/ec2-user/Prueba
+    delegate_to: node2.example.com
     
+

@@ -1,10 +1,19 @@
 ---
 - name: playbook completo
-  hosts: all
+  hosts: node1
   tasks:
-    - name: Transfer file from ServerA to ServerB
-      copy:
-        src: /home/ec2-user/deployment/archivoPrueba.jar
-        dest: /tmp/
-        remote_src: yes
-      delegate_to: node1
+    - name: Ver servicios activos
+      command: ps -aux | grep java
+
+    - name: Bajar el servicio
+      command: pkill -9 -f {{nombreJar}}.jar
+    
+    - name: Cambiar nombre antiguo jar
+      command: mv {{nombreJar}}.jar {{antiguoJar}}.jar_old06052022
+    
+    - name: Mover el nuevo jar a la carpetaJar
+      command: mv {{nuevoJar}}.jar /home/carpetaJar/
+
+    - name: Levantar el nuevo proceso
+      command: nohup java -jar {{nuevoJar}}.jar &> BankService_04052022_3.out 2>&1&
+    

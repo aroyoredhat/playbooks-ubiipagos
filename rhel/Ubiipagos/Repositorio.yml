@@ -1,6 +1,6 @@
 ---
 - name: Descargar repositorio
-  hosts: node2
+  hosts: all
 
   tasks:
   - name: Install git

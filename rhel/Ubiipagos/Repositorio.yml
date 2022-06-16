@@ -12,7 +12,7 @@
   - name: Clonar repositorio
     ansible.builtin.git:
        repo: https://github.com/aroyoredhat/playbooks-ubiipagos.git
-       dest: /home/
+       dest: /home/repo
 
   - name: SCP
     copy:

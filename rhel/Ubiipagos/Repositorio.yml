@@ -19,4 +19,4 @@
       src: /home/ec2-user/deployment/archivoPrueba.jar
       dest: /home/
       remote_src: yes
-    delegate_to: node1
+    delegate_to: node1.example.com

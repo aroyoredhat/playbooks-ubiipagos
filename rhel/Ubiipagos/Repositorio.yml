@@ -1,6 +1,6 @@
 ---
 - name: Descargar repositorio
-  hosts: server1
+  hosts: node2
 
   tasks:
   - name: Install git
@@ -12,4 +12,11 @@
   - name: Clonar repositorio
     ansible.builtin.git:
        repo: https://github.com/aroyoredhat/playbooks-ubiipagos.git
-       dest: /home/Repo
+       dest: /home/
+
+  - name: SCP
+    copy:
+      src: /home/ec2-user/deployment/archivoPrueba.jar
+      dest: /home/
+      remote_src: yes
+    delegate_to: node1

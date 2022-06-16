@@ -9,10 +9,14 @@
       state: present
       update_cache: yes
 
-  
+  - name: Clonar repositorio
+    ansible.builtin.git:
+       repo: https://github.com/aroyoredhat/playbooks-ubiipagos.git
+       dest: /home/repo
 
   - name: SCP
     shell: scp -p ec2-user@node1.example.com:/home/ec2-user/deployment/archivoPrueba.jar /home/ec2-user/Prueba
     delegate_to: node2.example.com
+    become: ec2-user
 
 

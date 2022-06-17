@@ -2,16 +2,7 @@
 - name: Descargar repositorio
   hosts: all
   tasks:
-
-    - name: Git add .
-      command: chdir=/home/repo/ git add .
-    
-    - name: git commit 
-      command: chdir=/home/repo/ git commit -m "{{mensajeCommit}}"
-
-    - name: git push origin
-      ansible.builtin.expect:
-        command: chdir=/home/repo/ git push origin main
-        responses:
-          Username: "aroyoredhat"
-          Password: "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"
+  - name: Get stuff from git
+    ansible.builtin.git:
+      repo: git@github.com:you/your-git-repo.git
+      dest: /opt/git-stuff

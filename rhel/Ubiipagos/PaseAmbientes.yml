@@ -17,4 +17,6 @@
 
     - name: Levantar el nuevo proceso
       command: nohup java -jar {{nuevoJar}}.jar &> BankService_04052022_3.out 2>&1&
+      delegate_to: node2.example.com
+    
     

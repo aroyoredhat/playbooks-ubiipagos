@@ -12,7 +12,8 @@
       command: git commit -m "{{Mensaje commit}}"
 
     - name: git push origin
-      command: git push origin main
-      responses:
-        Username: "aroyoredhat"
-        Password: "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"
+      ansible.builtin.expect:
+        command: git push origin main
+        responses:
+          Username: "aroyoredhat"
+          Password: "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"

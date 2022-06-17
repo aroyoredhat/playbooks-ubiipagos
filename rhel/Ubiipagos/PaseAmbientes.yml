@@ -16,7 +16,6 @@
       command: mv /home/ec2-user/Prueba/{{nuevoJar}}.jar /home/carpetaJar/
 
     - name: Levantar el nuevo proceso
-      command: nohup java -jar {{nuevoJar}}.jar &> BankService_04052022_3.out 2>&1&
+      command: nohup java -jar /home/carpetaJar/{{nuevoJar}}.jar &> BankService_04052022_3.out 2>&1&
       delegate_to: node2.example.com
-    
     

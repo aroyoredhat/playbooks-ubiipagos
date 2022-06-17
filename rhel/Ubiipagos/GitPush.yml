@@ -5,14 +5,14 @@
     - lvrfrc87.git_acp
 
   tasks:
-    - name: HTTPS | push all changes.
-      git_acp:
-        user: aroyoredhat
-        token: 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
-        path: /home/repo/
-        branch: master
-        comment: Add all the thinghs.
-        add: [ "." ]
-        mode: https
-        url: "https://github.com/aroyoredhat/playbooks-ubiipagos.git"
+    - name: Git add .
+      command: git add .
     
+    - name: git commit 
+      command: git commit -m "{{Mensaje commit}}"
+
+    - name: git push origin
+      command: git push origin main
+      responses:
+        Username: "aroyoredhat"
+        Password: "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"

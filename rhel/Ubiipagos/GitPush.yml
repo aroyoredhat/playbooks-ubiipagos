@@ -1,10 +1,10 @@
 ---
 - name: Descargar repositorio
   hosts: all
-  collections:
-    - lvrfrc87.git_acp
-
   tasks:
+    - name: Ubicarse en el repositorio
+      shell: chdir=home/repo/
+
     - name: Git add .
       command: git add .
     

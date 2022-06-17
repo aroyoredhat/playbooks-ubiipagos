@@ -1,7 +1,9 @@
 ---
 - name: Descargar repositorio
   hosts: all
-
+  gather_facts: false
+  collections:
+    - lvrfrc87.git_acp
   tasks:
   - name: HTTPS | push all changes.
     git_acp:

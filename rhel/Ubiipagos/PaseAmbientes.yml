@@ -3,7 +3,7 @@
   hosts: all
   tasks:
     - name: SCP
-      shell: scp -p node1.example.com:/home/repo/rhel/ubiipagos/executablejarexample/{{nuevoJar}}.jar /home/ec2-user/Prueba
+      shell: scp -p node1.example.com:/home/repo/rhel/Ubiipagos/executablejarexample/{{nuevoJar}}.jar /home/ec2-user/Prueba
       delegate_to: node2.example.com
 
     - name: Ver servicios activos

@@ -7,7 +7,7 @@
       command: chdir=/home/repo/ git add .
     
     - name: git commit 
-      command: chdir=/home/repo/ git commit -m "{{Mensaje commit}}"
+      command: chdir=/home/repo/ git commit -m "{{mensajeCommit}}"
 
     - name: git push origin
       ansible.builtin.expect:

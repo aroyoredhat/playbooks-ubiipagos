@@ -1,17 +1,14 @@
 ---
 - name: Descargar repositorio
   hosts: all
-  gather_facts: false
-  collections:
-    - lvrfrc87.git_acp
   tasks:
-  - name: HTTPS | push all changes.
-    git_acp:
-      user: aroyoredhat
-      token: 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
-      path: /home/repo/
-      branch: master
-      comment: Add all the thinghs.
-      add: [ "." ]
-      mode: https
-      url: "https://github.com/aroyoredhat/playbooks-ubiipagos.git"
+    - name: HTTPS | push all changes.
+      git_acp:
+        user: aroyoredhat
+        token: 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
+        path: /home/repo/
+        branch: master
+        comment: Add all the thinghs.
+        add: [ "." ]
+        mode: https
+        url: "https://github.com/aroyoredhat/playbooks-ubiipagos.git"

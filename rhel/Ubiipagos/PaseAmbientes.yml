@@ -6,13 +6,11 @@
       shell: scp -p node1.example.com:/home/repo/rhel/Ubiipagos/executablejarexample/{{nuevoJar}}.jar /home/ec2-user/Prueba
       delegate_to: node2.example.com
 
-    
-
     - name: Bajar el servicio
       command: pkill -9 -f {{nombreJar}}.jar
     
     - name: Cambiar nombre antiguo jar
-      command: mv {{nombreJar}}.jar {{antiguoJar}}.jar_old06052022
+      command: mv {{nombreJar}}.jar {{antiguoJar}}.jar
     
     - name: Mover el nuevo jar a la carpetaJar
       command: mv {{nuevoJar}}.jar /home/carpetaJar/

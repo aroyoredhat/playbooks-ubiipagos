@@ -1,6 +1,6 @@
 ---
 - name: Instalar java
-  hosts: web
+  hosts: all
 
   tasks:
     - name: Update repos

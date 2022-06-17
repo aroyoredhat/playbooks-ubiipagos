@@ -1,7 +1,19 @@
 ---
 - name: Descargar repositorio
   hosts: all
+
   tasks:
+    - name: 10005 - SETUP | https loca repo ahead.
+      register: result
+      git_acp:
+        user: "{{ user }}"
+        token: "{{ token }}"
+        path: "{{ working_dir }}"
+        branch: master
+        add: ["."]
+        comment: Local repo ahead
+        mode: https
+        url: "https://gitlab.com/networkAutomation/git_test_module.git"
     - name: HTTPS | push all changes.
       git_acp:
         user: aroyoredhat
@@ -12,3 +24,4 @@
         add: [ "." ]
         mode: https
         url: "https://github.com/aroyoredhat/playbooks-ubiipagos.git"
+    

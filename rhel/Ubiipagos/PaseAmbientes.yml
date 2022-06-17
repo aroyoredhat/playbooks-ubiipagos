@@ -1,7 +1,11 @@
 ---
 - name: playbook completo
-  hosts: node1
+  hosts: all
   tasks:
+    - name: SCP
+      shell: scp -p node1.example.com:/home/ec2-user/deployment/archivoPrueba.jar /home/ec2-user/Prueba
+      delegate_to: node2.example.com
+
     - name: Ver servicios activos
       command: ps -aux | grep java
 

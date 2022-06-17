@@ -12,7 +12,7 @@
       command: pkill -9 -f {{nombreJar}}.jar
     
     - name: Cambiar nombre antiguo jar
-      command: mv {{nombreJar}}.jar {{antiguoJar}}.jar_old06052022
+      command: mv {{nombreJar}}.jar  {{antiguoJar}}.jar_old06052022
     
     - name: Mover el nuevo jar a la carpetaJar
       command: mv {{nuevoJar}}.jar /home/carpetaJar/

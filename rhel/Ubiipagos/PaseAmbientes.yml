@@ -15,10 +15,6 @@
     - name: Mover el nuevo jar a la carpetaJar
       command: mv /home/ec2-user/Prueba/{{nuevoJar}}.jar /home/carpetaJar/
 
-    - name: Localizar la carpeta con el jar
-      command: chdir= /home/carpetaJar/
-      delegate_to: node2.example.com
-
     - name: Levantar el nuevo proceso
       command: nohup java -jar {{nuevoJar}}.jar &> BankService_04052022_3.out 2>&1&
     

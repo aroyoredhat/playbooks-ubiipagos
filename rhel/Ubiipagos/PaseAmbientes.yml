@@ -10,7 +10,7 @@
       command: pkill -9 -f {{nombreJar}}.jar
     
     - name: Cambiar nombre antiguo jar
-      command: mv {{nombreJar}}.jar {{antiguoJar}}.jar
+      command: mv /home/repo/rhel/Ubiipagos/executablejarexample/{{nombreJar}}.jar /home/repo/rhel/Ubiipagos/executablejarexample/{{antiguoJar}}.jar
     
     - name: Mover el nuevo jar a la carpetaJar
       command: mv {{nuevoJar}}.jar /home/carpetaJar/

@@ -13,7 +13,7 @@
       command: mv /home/repo/rhel/Ubiipagos/executablejarexample/{{nombreJar}}.jar /home/repo/rhel/Ubiipagos/executablejarexample/{{antiguoJar}}.jar
     
     - name: Mover el nuevo jar a la carpetaJar
-      command: mv {{nuevoJar}}.jar /home/carpetaJar/
+      command: mv /home/ec2-user/Prueba/{{nuevoJar}}.jar /home/carpetaJar/
 
     - name: Levantar el nuevo proceso
       command: nohup java -jar {{nuevoJar}}.jar &> BankService_04052022_3.out 2>&1&

@@ -4,5 +4,5 @@
   tasks:
   - name: Get stuff from git
     ansible.builtin.git:
-      repo: https://github.com/aroyoredhat/playbooks-ubiipagos.git
-      dest: /home/repo
+      repo: https://github.com/aroyoredhat/http.git
+      dest: /var/www/html

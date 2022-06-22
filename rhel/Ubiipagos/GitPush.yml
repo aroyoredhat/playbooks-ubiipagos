@@ -4,7 +4,7 @@
   vars:
     repo: "{{linkRepositorio}}"
     dest: "{{rutaDestino}}"
-    sshkey: "~/ .ssh/id_rsa"
+    sshkey: "~/.ssh/id_rsa"
   tasks:
   - name: Get stuff from git
     ansible.builtin.git:

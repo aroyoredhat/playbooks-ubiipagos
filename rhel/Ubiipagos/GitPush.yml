@@ -1,8 +1,13 @@
 ---
 - name: Descargar repositorio
   hosts: all
+  vars:
+    repo: "{{linkRepositorio}}"
+    dest: "{{rutaDestino}}"
+    sshkey: "~/ .ssh/id_rsa"
   tasks:
   - name: Get stuff from git
     ansible.builtin.git:
-      repo: '{{linkRepositorio}}'
-      dest: '{{rutaDestino}}'
+      repo: "{{ repo }}"
+      dest: "{{ dest }}"
+      key_file: "{{sshkey}}"

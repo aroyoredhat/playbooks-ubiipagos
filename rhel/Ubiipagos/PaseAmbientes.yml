@@ -3,8 +3,8 @@
   hosts: all
   tasks:
     - name: SCP
-      shell: scp -p node1.example.com:{{rutaNuevoJar}} {{rutaGuardarJar}}
-      delegate_to: node2.example.com
+      shell: scp -p {{nodoAcceso}}:{{rutaNuevoJar}} {{rutaGuardarJar}}
+      delegate_to: "{{nodoProd}}"
 
     - name: Bajar el servicio
       command: pkill -9 -f {{nombreJar}}.jar
@@ -17,5 +17,5 @@
 
     - name: Levantar el nuevo proceso
       shell: nohup java -jar {{rutaProceso}} &> {{rutaOut}} 2>&1&
-      delegate_to: node2.example.com
+      delegate_to: "{{nodoProd}}"
     

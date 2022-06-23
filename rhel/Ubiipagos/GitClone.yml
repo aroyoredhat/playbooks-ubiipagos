@@ -1,0 +1,14 @@
+---
+- name: Descargar repositorio
+  hosts: all
+
+  tasks:
+  - name: Clonar repositorio
+    ansible.builtin.git:
+       repo: '{{linkRepositorio}}'
+       dest: '{{rutaDestino}}'
+
+  
+    
+
+

@@ -4,12 +4,12 @@
 
   tasks:
   - name: latest Apache version installed
-    yum:
+    ansible.builtin.dnf:
       name: httpd
       state: latest
 
   - name: latest firewalld version installed
-    yum:
+    ansible.builtin.dnf:
       name: firewalld
       state: latest
 

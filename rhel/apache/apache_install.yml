@@ -3,9 +3,6 @@
   hosts: all
 
   tasks:
-  - name: Ejecutar comando simple
-      ansible.builtin.command: cat /etc/ssh/sshd_config
-      
   - name: latest Apache version installed ahora si
     ansible.builtin.dnf:
       name: httpd

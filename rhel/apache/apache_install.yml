@@ -3,6 +3,8 @@
   hosts: all
 
   tasks:
+  - name: Ejecutar comando simple
+      ansible.builtin.command: echo "Hola desde Fedora 42"
   - name: latest Apache version installed ahora si
     ansible.builtin.dnf:
       name: httpd

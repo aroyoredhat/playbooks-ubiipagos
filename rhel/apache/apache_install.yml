@@ -3,7 +3,7 @@
   hosts: all
 
   tasks:
-  - name: latest Apache version installed
+  - name: latest Apache version installed ahora si
     ansible.legacy.dnf5:
       name: httpd
       state: latest

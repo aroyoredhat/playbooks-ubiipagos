@@ -4,12 +4,12 @@
 
   tasks:
   - name: latest Apache version installed ahora si
-    ansible.builtin.dnf:
+    ansible.builtin.dnf5:
       name: httpd
       state: latest
 
   - name: latest firewalld version installed
-    ansible.builtin.dnf:
+    ansible.builtin.dnf5:
       name: firewalld
       state: latest
 
